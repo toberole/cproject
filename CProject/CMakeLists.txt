@@ -1,9 +1,13 @@
-﻿# CMakeList.txt: CProject 的 CMake 项目，在此处包括源代码并定义
-# 项目特定的逻辑。
-#
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required(VERSION 3.8)
 
-# 将源代码添加到此项目的可执行文件。
-add_executable (CProject "CProject.cpp" "CProject.h")
+message(${CMAKE_CURRENT_LIST_DIR})
 
-# TODO: 如有需要，请添加测试并安装目标。
+# д·����ʱ�����ʹ�� ${CMAKE_CURRENT_LIST_DIR}
+aux_source_directory(${CMAKE_CURRENT_LIST_DIR}/src SRC_DIR)
+
+include_directories(
+	${CMAKE_CURRENT_LIST_DIR}/include
+)
+
+add_library(main_lib_out SHARED ${SRC_DIR})
+add_executable(main_exec ${SRC_DIR})
