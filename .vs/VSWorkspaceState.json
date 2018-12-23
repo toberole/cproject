@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\CProject",
+    "\\CProject\\include",
     "\\CProject\\src"
   ],
-  "SelectedNode": "\\CProject\\CMakelists.txt",
+  "SelectedNode": "\\CMakeSettings.json",
   "PreviewInSolutionExplorer": false
 }

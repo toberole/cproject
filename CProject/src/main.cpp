@@ -53,16 +53,20 @@ void test4() {
 	std::cout << sizeof(s) << std::endl;
 }
 
+void test05() {
+	static int i = 0;
+	std::cout << "i = " << i << std::endl;
+
+	i++;
+}
+
 int main()
 {
-	cout << "Hello CMake" << endl;
-
-	// test1();
-	// test2();
-	// test3();
-
-	test4();
+	int j = 0;
+	int &n = j;
+	const int &i = 9;
 	
+	std::cout << i << std::endl;
 	getchar();
 	return 0;
 }
