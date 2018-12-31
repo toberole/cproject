@@ -7,6 +7,11 @@
       "project": "CMakeLists.txt",
       "projectTarget": "CProject.exe (CProject\\CProject.exe)",
       "name": "CProject.exe (CProject\\CProject.exe)"
+    },
+    {
+      "type": "native",
+      "name": "D:\\code\\cpp\\CProject",
+      "project": ""
     }
   ]
 }

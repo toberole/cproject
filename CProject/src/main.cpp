@@ -1,9 +1,10 @@
 ﻿#include <iostream>
 #include <thread>
+#include <functional>
 
 #include "Util.h"
-#include "Student.h"
-#include "Book.h"
+#include "Student.hpp"
+#include "Book.hpp"
 
 using namespace std;
 
@@ -62,11 +63,25 @@ void test05() {
 
 int main()
 {
+
 	int j = 0;
 	int &n = j;
 	const int &i = 9;
 	
 	std::cout << i << std::endl;
+
+	std::thread th([] {
+		std::cout << "----------------------" << std::endl;
+	});
+
+	th.detach();
+	/*
+	if (th.joinable())
+	{
+		th.join();
+	}
+	getchar();
+	*/
 	getchar();
 	return 0;
 }
