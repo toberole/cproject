@@ -68,14 +68,23 @@ void Test1() {
 	*p = 22;
 	std::cout << "i = " << i << std::endl;
 	std::cout << "*p = " << *p << std::endl;
+}
 
+#include "Test.h"
+
+void Test2() {
+	int count = 0;
+	std::thread th1(p, std::ref(count));
+	std::thread th2(c, std::ref(count));
+
+	th1.join();
+	th2.join();
 }
 
 int main()
 {
+	std::cout << std::thread::hardware_concurrency();
 
-	Test1();
-	
 	std::cout << "press any key to exit ......" << std::endl;
 	getchar();
 	return 0;
