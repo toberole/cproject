@@ -61,27 +61,22 @@ void test05() {
 	i++;
 }
 
+
+void Test1() {
+	const int i = 1;
+	int *p = const_cast<int*>(&i);
+	*p = 22;
+	std::cout << "i = " << i << std::endl;
+	std::cout << "*p = " << *p << std::endl;
+
+}
+
 int main()
 {
 
-	int j = 0;
-	int &n = j;
-	const int &i = 9;
+	Test1();
 	
-	std::cout << i << std::endl;
-
-	std::thread th([] {
-		std::cout << "----------------------" << std::endl;
-	});
-
-	th.detach();
-	/*
-	if (th.joinable())
-	{
-		th.join();
-	}
-	getchar();
-	*/
+	std::cout << "press any key to exit ......" << std::endl;
 	getchar();
 	return 0;
 }
