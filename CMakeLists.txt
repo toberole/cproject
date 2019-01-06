@@ -11,4 +11,4 @@ message("PROJECT_SOURCE_DIR = ${PROJECT_SOURCE_DIR}")
 
 # 包含子项目。
 # add_subdirectory ("CProject")
-include(CProject/CMakelists.txt)
+include(CProject/CMakeLists.txt)
