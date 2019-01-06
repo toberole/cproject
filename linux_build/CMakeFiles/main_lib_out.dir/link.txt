@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libmain_lib_out.so -o libmain_lib_out.so CMakeFiles/main_lib_out.dir/CProject/src/main.cpp.o 

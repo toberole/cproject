@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/main.dir/CProject/src/main.cpp.o  -o main -pthread 

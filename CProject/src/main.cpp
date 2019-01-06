@@ -3,8 +3,10 @@
 #include <functional>
 
 #include "Util.h"
-#include "Student.hpp"
-#include "Book.hpp"
+#include "Student.h"
+#include "Book.h"
+
+#include "Test.h"
 
 using namespace std;
 
@@ -70,7 +72,7 @@ void Test1() {
 	std::cout << "*p = " << *p << std::endl;
 }
 
-#include "Test.h"
+
 
 void Test2() {
 	int count = 0;
@@ -83,9 +85,10 @@ void Test2() {
 
 int main()
 {
-	std::cout << std::thread::hardware_concurrency();
+	std::cout << std::thread::hardware_concurrency()<<std::endl;
 
 	std::cout << "press any key to exit ......" << std::endl;
 	getchar();
+
 	return 0;
 }

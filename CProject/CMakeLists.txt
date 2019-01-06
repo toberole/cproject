@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.8)
+ï»¿cmake_minimum_required(VERSION 3.8)
 
 message(${CMAKE_CURRENT_LIST_DIR})
 
-# Ğ´Â·¾¶µÄÊ±ºò×îºÃÊ¹ÓÃ ${CMAKE_CURRENT_LIST_DIR}
+# å†™è·¯å¾„çš„æ—¶å€™æœ€å¥½ä½¿ç”¨ ${CMAKE_CURRENT_LIST_DIR}
 aux_source_directory(${CMAKE_CURRENT_LIST_DIR}/src SRC_DIR)
 
 include_directories(
@@ -10,4 +10,12 @@ include_directories(
 )
 
 add_library(main_lib_out SHARED ${SRC_DIR})
-add_executable(main_exec ${SRC_DIR})
+add_executable(main ${SRC_DIR})
+
+# Linux éœ€è¦æ·»åŠ threadåº“
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+	set(THREADS_PREFER_PTHREAD_FLAG ON)
+	find_package(Threads REQUIRED)
+endif()
+
+target_link_libraries(main Threads::Threads)

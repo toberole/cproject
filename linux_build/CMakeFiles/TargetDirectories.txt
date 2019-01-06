@@ -1,0 +1,4 @@
+/mnt/d/code/cpp/CProject/linux_build/CMakeFiles/rebuild_cache.dir
+/mnt/d/code/cpp/CProject/linux_build/CMakeFiles/main_lib_out.dir
+/mnt/d/code/cpp/CProject/linux_build/CMakeFiles/edit_cache.dir
+/mnt/d/code/cpp/CProject/linux_build/CMakeFiles/main.dir

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../CProject/include/Book.h
+iostream
+-
+
+../CProject/include/Student.h
+iostream
+-
+Book.h
+../CProject/include/Book.h
+stdio.h
+../CProject/include/stdio.h
+
+../CProject/include/Test.h
+iostream
+-
+mutex
+-
+
+../CProject/include/Util.h
+string
+-
+
+/mnt/d/code/cpp/CProject/CProject/src/main.cpp
+iostream
+-
+thread
+-
+functional
+-
+Util.h
+/mnt/d/code/cpp/CProject/CProject/src/Util.h
+Student.h
+/mnt/d/code/cpp/CProject/CProject/src/Student.h
+Book.h
+/mnt/d/code/cpp/CProject/CProject/src/Book.h
+Test.h
+/mnt/d/code/cpp/CProject/CProject/src/Test.h
+
